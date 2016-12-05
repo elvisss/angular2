@@ -1,0 +1,11 @@
+h1 {
+  color: red;
+}
+
+.showingData {
+  display: none;
+}
+
+.checked {
+  color: red;
+}
