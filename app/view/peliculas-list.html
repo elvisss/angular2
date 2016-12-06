@@ -18,10 +18,9 @@
 
 <p>Listado de Películas</p>
 
-{{datoServicio}}
-
 <ul *ngFor="#pelicula of peliculas">
   <li *ngIf="pelicula.titulo" (click)="onCambiarPelicula(pelicula)" [class.checked]="checked === pelicula.id"><b>Título:</b>{{pelicula.titulo}}</li>
   <li *ngIf="pelicula.director"><b>Director:</b> {{pelicula.director}}</li>
   <li *ngIf="pelicula.anio"><b>Año:</b> {{pelicula.anio}}</li>
+  <li><a [routerLink]="['CrearPeliculaBasadaEnOtra', {titulo: pelicula.titulo, director: pelicula.director, anio: pelicula.anio}]">Añadir pelicula basada en esta</a></li>
 </ul>

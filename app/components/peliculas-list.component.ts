@@ -2,12 +2,14 @@
 import {Component} from 'angular2/core';
 import {Pelicula} from '../model/pelicula';
 import {PeliculasService} from '../services/pelicula.service';
+import {ROUTER_DIRECTIVES, RouteConfig, Router} from 'angular2/router';
  
 // Decorador component, indicamos en que etiqueta se va a cargar la plantilla
 @Component({
     selector: 'peliculas-list',
     templateUrl: 'app/view/peliculas-list.html',
-    providers: [PeliculasService]
+    providers: [PeliculasService],
+    directives: [ROUTER_DIRECTIVES]
 })
  
 // Clase del componente donde iran los datos y funcionalidades
